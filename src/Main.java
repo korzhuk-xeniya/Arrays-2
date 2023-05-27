@@ -20,11 +20,11 @@ public class Main {
     public static void task1() {
         System.out.println("Массивы-2");
         System.out.println("Задача 1");
-        int[] arr = generateRandomArray();
-        System.out.println(Arrays.toString(arr));
+        int[] month = generateRandomArray();
+        System.out.println(Arrays.toString(month));
         int amountOfExpenses = 0;
-        for (int days = 0; days < arr.length; days++) {
-            amountOfExpenses = amountOfExpenses + arr[days];
+        for (int day : month) {
+            amountOfExpenses = amountOfExpenses + day;
         }
         System.out.println("Сумма трат за месяц составилв " + amountOfExpenses + " рублей");
     }
@@ -53,19 +53,29 @@ public class Main {
                 maxDay = day;
             }
         }
-        System.out.println("Минимальная сумма трат за день составила " + minimumWaste + " рублей в " + minDay + " день. " +
-                "Максимальная сумма трат за день составила " + maximumWaste + " рублей в " + maxDay + " день.");
+        System.out.println("Минимальная сумма трат за день составила " + minimumWaste + " рублей в " + minDay + " день. " + "Максимальная сумма трат за день составила " + maximumWaste + " рублей в " + maxDay + " день.");
         System.out.println();
     }
 
     public static void task3() {
         System.out.println("Задача 3");
-
-
+        int[] month = generateRandomArray();
+        System.out.println(Arrays.toString(month));
+        double average = 0;
+        int amountOfExpenses = 0;
+        for (int day : month) {
+            amountOfExpenses = amountOfExpenses + day;
+        }
+        average = (double) amountOfExpenses / month.length;
+        System.out.printf("Средняя сумма трат за месяц составила %.2f рублей в  день.", average);
+        System.out.println();
     }
 
     public static void task4() {
         System.out.println("Задача 4");
-
+        char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
+        for (int letters = reverseFullName.length - 1; letters >= 0; letters--) {
+            System.out.print(reverseFullName[letters]);
+        }
     }
 }
